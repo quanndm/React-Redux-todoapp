@@ -9,7 +9,7 @@ const Todolist = memo((props) => {
     const isCheckedAll = useSelector(state => state.todos.isCheckedAll)
     return (
         <section className="main">
-            <input className="toggle-all" type="checkbox" checked={isCheckedAll}/>
+            <input className="toggle-all" type="checkbox" checked={isCheckedAll} readOnly/>
             <label htmlFor="toggle-all" onClick={()=>dispatch(checkAllTodos())}></label>
             <ul className="todo-list">
                 {
